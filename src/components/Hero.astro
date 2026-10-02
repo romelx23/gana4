@@ -1,0 +1,86 @@
+---
+const PLAY_URL = "https://play.google.com/store/apps/details?id=com.romel.gana4";
+---
+
+<section class="mx-auto max-w-6xl px-4 pb-16 pt-14 sm:px-6 sm:pt-20">
+  <div class="grid items-center gap-12 lg:grid-cols-2">
+    <div>
+      <span
+        class="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent-soft"
+      >
+        Cuatro en línea
+      </span>
+
+      <h1 class="mt-6 font-display text-5xl font-bold leading-[1.02] sm:text-6xl">
+        Conecta 4 y <span class="text-gradient">gana</span> la copa
+      </h1>
+
+      <p class="mt-5 max-w-xl text-lg leading-relaxed text-txt-soft">
+        Juega <strong class="font-semibold text-txt">contra la máquina</strong> en tres niveles o
+        desafía a alguien en
+        <strong class="font-semibold text-txt">multijugador por WiFi local</strong>. Sin registro,
+        sin cuentas, todo desde tu dispositivo.
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a
+          href={PLAY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 rounded-2xl bg-accent px-6 py-4 font-display font-semibold text-white shadow-lg shadow-accent/30 transition hover:-translate-y-0.5 hover:bg-accent-soft hover:text-ink"
+        >
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path
+              d="M3.6 2.3a1.5 1.5 0 0 0-.6 1.2v17c0 .5.2.9.6 1.2l9.1-9.7L3.6 2.3Zm11 8.1 2.9-3.1-9.4-5.3a1.5 1.5 0 0 0-.6-.1l7.1 8.5Zm0 3.2-7.1 8.5c.2 0 .4 0 .6-.1l9.4-5.3-2.9-3.1Zm5.5-3.4-2.4-1.3-3.1 3.3 3.1 3.3 2.4-1.3c.9-.5.9-2.5 0-3Z"
+            ></path>
+          </svg>
+          Disponible en Google Play
+        </a>
+
+        <a
+          href="/privacidad"
+          class="rounded-2xl border border-white/15 px-6 py-4 font-display font-semibold text-txt-soft transition hover:border-accent/60 hover:text-txt"
+        >
+          Política de privacidad
+        </a>
+      </div>
+
+      <dl class="mt-10 grid max-w-lg grid-cols-3 gap-4">
+        <div>
+          <dt class="text-xs uppercase tracking-widest text-txt-muted">Niveles</dt>
+          <dd class="font-display text-2xl font-bold text-txt">3</dd>
+        </div>
+        <div>
+          <dt class="text-xs uppercase tracking-widest text-txt-muted">Modos</dt>
+          <dd class="font-display text-2xl font-bold text-txt">3</dd>
+        </div>
+        <div>
+          <dt class="text-xs uppercase tracking-widest text-txt-muted">Registro</dt>
+          <dd class="font-display text-2xl font-bold text-txt">Ninguno</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="relative">
+      <div class="glass overflow-hidden rounded-3xl p-3">
+        <img
+          src="/feature-graphic-1024x500.png"
+          alt="Gana4, cuatro en línea"
+          width="1024"
+          height="500"
+          class="h-auto w-full rounded-2xl"
+          loading="eager"
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        class="absolute -bottom-6 -right-4 hidden gap-2 sm:flex"
+      >
+        <span class="h-9 w-9 rounded-full bg-piece-red shadow-lg shadow-piece-red/40"></span>
+        <span class="h-9 w-9 rounded-full bg-piece-yellow shadow-lg shadow-piece-yellow/40"></span>
+        <span class="h-9 w-9 rounded-full bg-piece-red shadow-lg shadow-piece-red/40"></span>
+        <span class="h-9 w-9 rounded-full bg-piece-yellow shadow-lg shadow-piece-yellow/40"></span>
+      </div>
+    </div>
+  </div>
+</section>

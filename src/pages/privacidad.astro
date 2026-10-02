@@ -1,0 +1,578 @@
+---
+import Base from "../layouts/Base.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+const contactEmail = "alexisdeveloper2722@gmail.com";
+const lastUpdated = "2 de octubre de 2026";
+
+const sections = [
+  { id: "responsable", label: "1. Responsable del tratamiento" },
+  { id: "datos", label: "2. Datos que tratamos" },
+  { id: "permisos", label: "3. Permisos y su uso" },
+  { id: "anuncios", label: "4. Publicidad (Google AdMob)" },
+  { id: "wifi", label: "5. Multijugador por WiFi local" },
+  { id: "almacenamiento", label: "6. Almacenamiento en el dispositivo" },
+  { id: "terceros", label: "7. Servicios de terceros" },
+  { id: "finalidad", label: "8. Finalidad y base legal" },
+  { id: "conservacion", label: "9. Conservación de los datos" },
+  { id: "derechos", label: "10. Tus derechos" },
+  { id: "menores", label: "11. Menores de edad" },
+  { id: "seguridad", label: "12. Seguridad" },
+  { id: "cambios", label: "13. Cambios en esta política" },
+  { id: "contacto", label: "14. Contacto" },
+  { id: "play", label: "15. Resumen para Google Play" },
+];
+---
+
+<Base
+  title="Política de Privacidad – Gana4"
+  description="Política de privacidad de Gana4 (com.romel.gana4): qué datos se tratan, publicidad con Google AdMob, multijugador por WiFi local, derechos del usuario y contacto."
+  canonicalPath="/privacidad"
+  type="article"
+>
+  <Nav />
+
+  <main class="mx-auto max-w-4xl px-4 pb-8 pt-12 sm:px-6">
+    <p class="text-xs font-semibold uppercase tracking-widest text-accent-soft">
+      Documento legal
+    </p>
+    <h1 class="mt-3 font-display text-4xl font-bold sm:text-5xl">Política de Privacidad</h1>
+    <p class="mt-4 max-w-2xl text-txt-soft">
+      Esta política explica qué información recoge la aplicación <strong class="text-txt"
+        >Gana4</strong
+      >, para qué la usa y qué control tienes sobre ella. Aplicamos el principio de minimización de
+      datos: solo tratamos lo imprescindible para que el juego funcione.
+    </p>
+
+    <div class="glass mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 rounded-2xl px-5 py-4">
+      <div>
+        <p class="text-xs uppercase tracking-widest text-txt-muted">Última actualización</p>
+        <p class="mt-1 text-sm font-medium text-txt">{lastUpdated}</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest text-txt-muted">Aplicación</p>
+        <p class="mt-1 text-sm font-medium text-txt">Gana4 · com.romel.gana4</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest text-txt-muted">Contacto</p>
+        <a
+          href={`mailto:${contactEmail}`}
+          class="mt-1 inline-block break-all text-sm font-medium text-accent-soft hover:text-cyan"
+        >
+          {contactEmail}
+        </a>
+      </div>
+    </div>
+
+    <!-- Índice -->
+    <nav class="glass mt-8 rounded-2xl p-6" aria-label="Índice de contenidos">
+      <p class="font-display text-sm font-semibold uppercase tracking-widest text-txt-muted">
+        Contenido
+      </p>
+      <ol class="mt-4 grid gap-2 sm:grid-cols-2">
+        {
+          sections.map((section) => (
+            <li>
+              <a
+                href={`#${section.id}`}
+                class="block text-sm text-txt-soft transition hover:text-accent-soft"
+              >
+                {section.label}
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </nav>
+
+    <!-- Resumen ejecutivo -->
+    <section class="mt-10 rounded-2xl border border-accent/40 bg-accent/10 p-6">
+      <h2 class="font-display text-xl font-semibold text-txt">En resumen</h2>
+      <ul class="mt-4 space-y-3 text-sm leading-relaxed text-txt-soft">
+        <li>
+          <strong class="text-txt">Gana4 no pide cuentas ni datos personales.</strong> No hay
+          registro, no recogemos nombre, correo, teléfono ni ubicación.
+        </li>
+        <li>
+          <strong class="text-txt">No enviamos datos a servidores propios.</strong> No tenemos
+          base de datos ni servicios backend: todo ocurre en tu teléfono.
+        </li>
+        <li>
+          <strong class="text-txt">Sí se muestran anuncios de Google AdMob,</strong> y Google
+          puede recoger identificadores de publicidad y datos del dispositivo para personalizar
+          los anuncios. Puedes optar por no recibir anuncios personalizados.
+        </li>
+        <li>
+          <strong class="text-txt">El multijugador usa tu red WiFi local.</strong> Las partidas
+          viajan entre los teléfonos de tu misma red y nunca salen a internet.
+        </li>
+        <li>
+          <strong class="text-txt">Guardamos tu récord de copa en tu propio dispositivo</strong> con
+          el almacenamiento interno de Android.
+        </li>
+      </ul>
+    </section>
+
+    <article class="mt-12 space-y-12">
+      <section id="responsable">
+        <h2 class="font-display text-2xl font-semibold text-txt">
+          1. Responsable del tratamiento
+        </h2>
+        <ul class="mt-4 space-y-2 text-txt-soft">
+          <li><strong class="text-txt">Titular:</strong> Romel Alexis (desarrollador independiente)</li>
+          <li>
+            <strong class="text-txt">Aplicación:</strong> Gana4 — Cuatro en Línea
+          </li>
+          <li><strong class="text-txt">Paquete Android:</strong> com.romel.gana4</li>
+          <li>
+            <strong class="text-txt">Correo de contacto:</strong>
+            <a href={`mailto:${contactEmail}`} class="break-all text-accent-soft hover:text-cyan">
+              {contactEmail}
+            </a>
+          </li>
+        </ul>
+        <p class="mt-4 text-txt-soft">
+          Para cualquier cuestión sobre esta política o sobre tus datos, escríbenos a ese correo y
+          responderemos lo antes posible.
+        </p>
+      </section>
+
+      <section id="datos">
+        <h2 class="font-display text-2xl font-semibold text-txt">2. Datos que tratamos</h2>
+        <p class="mt-4 text-txt-soft">
+          Gana4 recoge <strong class="text-txt">directamente</strong> los siguientes datos, todos
+          ellos de carácter técnico y no personal:
+        </p>
+        <div class="mt-5 overflow-x-auto">
+          <table class="w-full min-w-[560px] border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-white/15 text-left">
+                <th class="py-3 pr-4 font-semibold text-txt">Dato</th>
+                <th class="py-3 pr-4 font-semibold text-txt">Tipo</th>
+                <th class="py-3 font-semibold text-txt">Por qué</th>
+              </tr>
+            </thead>
+            <tbody class="text-txt-soft">
+              <tr class="border-b border-white/8">
+                <td class="py-3 pr-4">Dirección IP local (192.168.x.x)</td>
+                <td class="py-3 pr-4">Técnico</td>
+                <td class="py-3">Encontrar partidas en tu red WiFi local</td>
+              </tr>
+              <tr class="border-b border-white/8">
+                <td class="py-3 pr-4">Récord de la copa (2 números)</td>
+                <td class="py-3 pr-4">Técnico</td>
+                <td class="py-3">Mostrar tus mejores resultados</td>
+              </tr>
+              <tr class="border-b border-white/8">
+                <td class="py-3 pr-4">Preferencia de sonido</td>
+                <td class="py-3 pr-4">Técnico</td>
+                <td class="py-3">Recordar si activaste o silenciaste el audio</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4">Datos de publicidad (AdMob)</td>
+                <td class="py-3 pr-4">Terceros</td>
+                <td class="py-3">Mostrar anuncios y medir su rendimiento</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mt-5 text-txt-soft">
+          <strong class="text-txt">No recogemos:</strong> nombre, correo electrónico, número de
+          teléfono, dirección, ubicación, contactos, fotos, datos biométricos, historial de
+          navegación, información de pago ni credenciales de acceso. La aplicación no tiene sistema
+          de cuentas ni campo de texto para introducir datos personales.
+        </p>
+      </section>
+
+      <section id="permisos">
+        <h2 class="font-display text-2xl font-semibold text-txt">3. Permisos y su uso</h2>
+        <p class="mt-4 text-txt-soft">
+          Estos son los permisos que declara la aplicación en Android y para qué se usan:
+        </p>
+        <div class="mt-5 overflow-x-auto">
+          <table class="w-full min-w-[560px] border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-white/15 text-left">
+                <th class="py-3 pr-4 font-semibold text-txt">Permiso</th>
+                <th class="py-3 font-semibold text-txt">Uso en Gana4</th>
+              </tr>
+            </thead>
+            <tbody class="text-txt-soft">
+              <tr class="border-b border-white/8">
+                <td class="py-3 pr-4 font-mono text-xs text-accent-soft">INTERNET</td>
+                <td class="py-3">Descargar y mostrar los anuncios de Google AdMob</td>
+              </tr>
+              <tr class="border-b border-white/8">
+                <td class="py-3 pr-4 font-mono text-xs text-accent-soft">ACCESS_NETWORK_STATE</td>
+                <td class="py-3">Comprobar si hay conexión antes de cargar un anuncio</td>
+              </tr>
+              <tr class="border-b border-white/8">
+                <td class="py-3 pr-4 font-mono text-xs text-accent-soft">ACCESS_WIFI_STATE</td>
+                <td class="py-3">Detectar que estás en una red WiFi para el multijugador</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-mono text-xs text-accent-soft">CHANGE_WIFI_MULTICAST_STATE</td>
+                <td class="py-3">Enviar y recibir las balizas UDP que descubren partidas en tu red</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-5 text-txt-soft">
+          La aplicación <strong class="text-txt">no solicita</strong> permisos de cámara, micrófono,
+          contactos, almacenamiento externo, ubicación ni teléfono.
+        </p>
+      </section>
+
+      <section id="anuncios">
+        <h2 class="font-display text-2xl font-semibold text-txt">
+          4. Publicidad (Google AdMob)
+        </h2>
+        <p class="mt-4 text-txt-soft">
+          Gana4 es gratuita y se financia con anuncios mostrados por
+          <strong class="text-txt">Google AdMob</strong>, un servicio de Google Ireland Ltd. Para
+          mostrarlos, Google y sus socios pueden tratar:
+        </p>
+        <ul class="mt-4 list-disc space-y-2 pl-6 text-txt-soft">
+          <li>
+            <strong class="text-txt">Identificador de publicidad</strong> (Advertising ID): permite
+            personalizar los anuncios y desactivar la personalización desde los ajustes de Android.
+          </li>
+          <li>
+            <strong class="text-txt">Datos del dispositivo:</strong> modelo, versión del sistema
+            operativo, idioma, zona horaria y tipo de conexión.
+          </li>
+          <li>
+            <strong class="text-txt">Datos de uso publicitario:</strong> impresiones, clics y
+            si un anuncio se completó (por ejemplo, el vídeo recompensa).
+          </li>
+          <li>
+            <strong class="text-txt">Dirección IP:</strong> se usa de forma aproximada para
+            geolocalización y cumplir con la normativa de cada región.
+          </li>
+        </ul>
+        <p class="mt-4 text-txt-soft">
+          Gana4 no controla qué anuncios se muestran ni qué datos recoge Google con ellos. Te
+          recomendamos leer la
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-accent-soft underline decoration-accent/40 underline-offset-4 hover:text-cyan"
+            >Política de Privacidad de Google</a
+          > y la
+          <a
+            href="https://policies.google.com/technologies/ads"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-accent-soft underline decoration-accent/40 underline-offset-4 hover:text-cyan"
+            >Información sobre las tecnologías de anuncios de Google</a
+          >.
+        </p>
+
+        <h3 class="mt-6 font-display text-lg font-semibold text-txt">
+          Consentimiento para el Espacio Económico Europeo y Reino Unido
+        </h3>
+        <p class="mt-3 text-txt-soft">
+          Si te encuentras en el EEE o en el Reino Unido, al abrir la aplicación se te muestra el
+          mensaje de consentimiento de Google (UMP) para que elijas si aceptas la publicidad
+          personalizada. Puedes cambiar de opinión en cualquier momento desactivando la
+          personalización de anuncios en los ajustes de tu dispositivo o de Google.
+        </p>
+        <p class="mt-3 text-txt-soft">
+          Tu decisión no afecta al funcionamiento del juego: todas las partidas están disponibles
+          sin importar si aceptas o no.
+        </p>
+      </section>
+
+      <section id="wifi">
+        <h2 class="font-display text-2xl font-semibold text-txt">
+          5. Multijugador por WiFi local
+        </h2>
+        <p class="mt-4 text-txt-soft">
+          En el modo multijugador, un teléfono actúa como anfitrión y los demás se conectan a él
+          mediante la red WiFi local (puertos TCP 8890 y UDP 8891). En este modo se transmiten
+          <strong class="text-txt">únicamente los movimientos del juego</strong> (quién juega, qué
+          ficha se coloca y el estado del tablero).
+        </p>
+        <ul class="mt-4 list-disc space-y-2 pl-6 text-txt-soft">
+          <li>Las partidas <strong class="text-txt">no pasan por internet</strong> ni por servidores nuestros.</li>
+          <li>Solo son accesibles para los dispositivos conectados a la misma red local.</li>
+          <li>Si sales de la WiFi o cierras la app, la conexión se termina y no queda ningún registro.</li>
+          <li>El nombre o la dirección IP local de tu equipo solo se muestra en pantalla dentro de la partida.</li>
+        </ul>
+      </section>
+
+      <section id="almacenamiento">
+        <h2 class="font-display text-2xl font-semibold text-txt">
+          6. Almacenamiento en el dispositivo
+        </h2>
+        <p class="mt-4 text-txt-soft">
+          Gana4 usa el almacenamiento interno de Android (<code class="text-accent-soft"
+            >SharedPreferences</code
+          >) para guardar, de forma local y cifrada por el propio sistema:
+        </p>
+        <ul class="mt-4 list-disc space-y-2 pl-6 text-txt-soft">
+          <li><code class="text-accent-soft">copa_record_rounds</code> — rondas ganadas en tu mejor copa.</li>
+          <li><code class="text-accent-soft">copa_championships</code> — número de copas ganadas.</li>
+          <li>Preferencias de sonido y ajustes de partida.</li>
+        </ul>
+        <p class="mt-4 text-txt-soft">
+          Estos datos <strong class="text-txt">nunca salen de tu teléfono</strong>. Si desinstalas
+          la aplicación, se borran junto con ella. También puedes borrarlos desde los ajustes de
+          Android (Aplicaciones → Gana4 → Borrar datos).
+        </p>
+        <p class="mt-4 text-txt-soft">
+          El audio que se reproduce (frases del avatar) está <strong class="text-txt"
+            >empaquetado dentro de la app</strong>; la voz sintética se genera en el propio
+          dispositivo con el motor de texto a voz del sistema y no se envía a ningún servidor.
+        </p>
+      </section>
+
+      <section id="terceros">
+        <h2 class="font-display text-2xl font-semibold text-txt">7. Servicios de terceros</h2>
+        <div class="mt-5 overflow-x-auto">
+          <table class="w-full min-w-[600px] border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-white/15 text-left">
+                <th class="py-3 pr-4 font-semibold text-txt">Servicio</th>
+                <th class="py-3 pr-4 font-semibold text-txt">Proveedor</th>
+                <th class="py-3 font-semibold text-txt">Qué tratan</th>
+              </tr>
+            </thead>
+            <tbody class="text-txt-soft">
+              <tr class="border-b border-white/8">
+                <td class="py-3 pr-4">Google AdMob / Google Play Services</td>
+                <td class="py-3 pr-4">Google Ireland Ltd.</td>
+                <td class="py-3">ID de publicidad, dispositivo, IP aproximada, uso de anuncios</td>
+              </tr>
+              <tr class="border-b border-white/8">
+                <td class="py-3 pr-4">Formulario de consentimiento UMP</td>
+                <td class="py-3 pr-4">Google Ireland Ltd.</td>
+                <td class="py-3">Tu elección de consentimiento (aceptado/rechazado)</td>
+              </tr>
+              <tr class="border-b border-white/8">
+                <td class="py-3 pr-4">Tipografías (Google Fonts)</td>
+                <td class="py-3 pr-4">Google LLC</td>
+                <td class="py-3">Solo en este sitio web, nunca dentro de la app</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4">Google Play Store</td>
+                <td class="py-3 pr-4">Google LLC</td>
+                <td class="py-3">Distribución y actualizaciones de la app</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-5 text-txt-soft">
+          Gana4 <strong class="text-txt">no comparte</strong> ningún dato con redes sociales, plataformas
+          de análisis propias, herramientas de marketing ni terceros ajenos a los indicados.
+        </p>
+      </section>
+
+      <section id="finalidad">
+        <h2 class="font-display text-2xl font-semibold text-txt">
+          8. Finalidad y base legal
+        </h2>
+        <ul class="mt-4 list-disc space-y-3 pl-6 text-txt-soft">
+          <li>
+            <strong class="text-txt">Operar el juego</strong> (partidas, IA, copa y multijugador):
+            es necesario para prestarte el servicio que solicitaste al instalar la app.
+          </li>
+          <li>
+            <strong class="text-txt">Mostrar anuncios</strong> que financian el mantenimiento del
+            juego gratuito: se basa en tu consentimiento, que puedes retirar en cualquier momento.
+          </li>
+          <li>
+            <strong class="text-txt">Recordar tu récord de copa</strong>: interés legítimo en
+            conservar tu progreso en tu propio dispositivo.
+          </li>
+          <li>
+            <strong class="text-txt">Cumplir obligaciones legales</strong> y atender requerimientos
+            de las autoridades competentes, cuando sea exigible.
+          </li>
+        </ul>
+      </section>
+
+      <section id="conservacion">
+        <h2 class="font-display text-2xl font-semibold text-txt">
+          9. Conservación de los datos
+        </h2>
+        <ul class="mt-4 list-disc space-y-3 pl-6 text-txt-soft">
+          <li>
+            <strong class="text-txt">Datos locales (récord y ajustes):</strong> se conservan mientras
+            tengas la aplicación instalada y se borran al desinstalarla.
+          </li>
+          <li>
+            <strong class="text-txt">Datos de anuncios:</strong> los conserva Google según sus propios
+            plazos, que puedes consultar en su política de privacidad.
+          </li>
+          <li>
+            <strong class="text-txt">Datos de partidas locales:</strong> no se almacenan: viven solo
+            durante la partida en curso.
+          </li>
+        </ul>
+      </section>
+
+      <section id="derechos">
+        <h2 class="font-display text-2xl font-semibold text-txt">10. Tus derechos</h2>
+        <p class="mt-4 text-txt-soft">
+          Puedes ejercer de forma gratuita los derechos de acceso, rectificación, supresión,
+          oposición, limitación y portabilidad de tus datos, así como retirar el consentimiento que
+          hayas otorgado, en cualquier momento y sin justificación.
+        </p>
+        <ul class="mt-4 list-disc space-y-2 pl-6 text-txt-soft">
+          <li>
+            <strong class="text-txt">Sobre datos de la app:</strong> escríbenos a
+            <a href={`mailto:${contactEmail}`} class="break-all text-accent-soft hover:text-cyan">
+              {contactEmail}
+            </a> y tramitaremos tu solicitud.
+          </li>
+          <li>
+            <strong class="text-txt">Sobre tu identificador de publicidad:</strong> restablecelo o
+            desactiva la personalización desde los ajustes de Android → Privacidad → Anuncios.
+          </li>
+          <li>
+            <strong class="text-txt">Sobre datos de Google:</strong> consulta y descarga la
+            información desde
+            <a
+              href="https://myaccount.google.com/data-and-privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-accent-soft underline decoration-accent/40 underline-offset-4 hover:text-cyan"
+              >Tu privacidad y datos en Google</a
+            >.
+          </li>
+          <li>
+            Si consideras que no hemos atendido correctamente tu solicitud, puedes presentar una
+            reclamación ante la autoridad de protección de datos de tu país.
+          </li>
+        </ul>
+      </section>
+
+      <section id="menores">
+        <h2 class="font-display text-2xl font-semibold text-txt">11. Menores de edad</h2>
+        <p class="mt-4 text-txt-soft">
+          Gana4 es un juego apto para todos los públicos y no está dirigido de forma específica a
+          menores de 13 años. No recogemos conscientemente datos personales de menores. Si eres
+          padre, madre o tutor y crees que tu hijo ha facilitado datos a través de la aplicación,
+          escríbenos a
+          <a href={`mailto:${contactEmail}`} class="break-all text-accent-soft hover:text-cyan">
+            {contactEmail}
+          </a>
+          y eliminaremos esa información.
+        </p>
+      </section>
+
+      <section id="seguridad">
+        <h2 class="font-display text-2xl font-semibold text-txt">12. Seguridad</h2>
+        <p class="mt-4 text-txt-soft">
+          Al no existir servidores ni cuentas, no hay una base de datos que puedan filtrar. Los datos
+          que se guardan viven en el almacenamiento privado de tu aplicación y el tráfico del
+          multijugador circula únicamente por tu red local. Te recomendamos usar una WiFi con
+          contraseña y mantener el sistema y la app actualizados.
+        </p>
+      </section>
+
+      <section id="cambios">
+        <h2 class="font-display text-2xl font-semibold text-txt">
+          13. Cambios en esta política
+        </h2>
+        <p class="mt-4 text-txt-soft">
+          Podemos actualizar esta política para reflejar cambios en la aplicación o en la normativa.
+          Cualquier modificación se publicará en esta misma página con su nueva fecha de
+          actualización. Si el cambio afecta de forma significativa a tus derechos, te lo
+          notificaremos dentro de la aplicación antes de que entre en vigor.
+        </p>
+        <p class="mt-4 text-txt-soft">
+          <strong class="text-txt">Versión actual:</strong> 1.0 · {lastUpdated}
+        </p>
+      </section>
+
+      <section id="contacto">
+        <h2 class="font-display text-2xl font-semibold text-txt">14. Contacto</h2>
+        <p class="mt-4 text-txt-soft">
+          Para cualquier pregunta sobre esta política de privacidad o sobre el tratamiento de tus
+          datos, contáctanos:
+        </p>
+        <div class="glass mt-5 rounded-2xl p-6">
+          <p class="text-sm text-txt-soft">Correo electrónico del responsable</p>
+          <a
+            href={`mailto:${contactEmail}`}
+            class="mt-1 block break-all font-display text-lg font-semibold text-accent-soft hover:text-cyan"
+          >
+            {contactEmail}
+          </a>
+          <p class="mt-3 text-sm text-txt-muted">Asunto sugerido: «Privacidad de Gana4»</p>
+        </div>
+      </section>
+
+      <!-- Bloque listo para el formulario de Google Play -->
+      <section id="play">
+        <h2 class="font-display text-2xl font-semibold text-txt">
+          15. Resumen para Google Play (Datos de seguridad)
+        </h2>
+        <p class="mt-4 text-txt-soft">
+          Este bloque reproduce la información que se declara en el formulario
+          <em>Datos de seguridad</em> de Google Play Console para la aplicación Gana4.
+        </p>
+
+        <div class="glass mt-5 space-y-5 rounded-2xl p-6">
+          <div>
+            <p class="text-xs uppercase tracking-widest text-txt-muted">Se comparte con terceros</p>
+            <p class="mt-1.5 text-sm text-txt-soft">
+              Sí — <strong class="text-txt">datos de publicidad</strong> compartidos con Google
+              AdMob para mostrar anuncios.
+            </p>
+          </div>
+
+          <div>
+            <p class="text-xs uppercase tracking-widest text-txt-muted">Se recopilan y se envían</p>
+            <ul class="mt-1.5 list-disc space-y-1.5 pl-5 text-sm text-txt-soft">
+              <li>Identificadores de dispositivo</li>
+              <li>Datos de uso del anuncio (impresiones, clics, vídeos vistos)</li>
+              <li>Datos de diagnóstico del dispositivo (versión del SO, modelo)</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-xs uppercase tracking-widest text-txt-muted"
+              >Se cifran en tránsito</p
+            >
+            <p class="mt-1.5 text-sm text-txt-soft">
+              Sí — las comunicaciones con los servidores de Google usan TLS.
+            </p>
+          </div>
+
+          <div>
+            <p class="text-xs uppercase tracking-widest text-txt-muted">Puedes solicitar eliminación</p>
+            <p class="mt-1.5 text-sm text-txt-soft">
+              No aplica: la app no dispone de cuenta ni de datos personales que eliminar. Para los
+              datos de anuncios, usa los controles de privacidad de Google.
+            </p>
+          </div>
+
+          <div class="border-t border-white/10 pt-5">
+            <p class="text-xs uppercase tracking-widest text-txt-muted">Permisos solicitados</p>
+            <p class="mt-1.5 text-sm text-txt-soft">
+              Permiso de ubicación: <strong class="text-txt">no solicitado</strong>. Cámara,
+              micrófono, contactos, almacenamiento y teléfono: <strong class="text-txt"
+                >no solicitados</strong
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <div class="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8">
+      <a href="/" class="text-sm text-txt-soft transition hover:text-accent-soft">← Volver al inicio</a>
+      <a href="/terminos" class="text-sm text-txt-soft transition hover:text-accent-soft"
+        >Ver Términos de uso →</a
+      >
+    </div>
+  </main>
+
+  <Footer />
+</Base>

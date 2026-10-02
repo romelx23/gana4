@@ -1,0 +1,25 @@
+{
+  "name": "gana4-privacy",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio oficial de Gana4: landing, política de privacidad y términos de uso.",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.4",
+    "@tailwindcss/vite": "4.2.3",
+    "astro": "6.1.8",
+    "tailwindcss": "4.2.3"
+  },
+  "overrides": {
+    "vite": "7.3.6"
+  }
+}

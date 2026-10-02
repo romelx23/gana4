@@ -1,0 +1,36 @@
+---
+const shots = [
+  { src: "/screenshots/01-inicio.png", alt: "Menú principal de Gana4", caption: "Menú principal" },
+  {
+    src: "/screenshots/02-victoria.png",
+    alt: "Pantalla de victoria en Gana4",
+    caption: "Victoria en el tablero",
+  },
+  { src: "/screenshots/03-copa.png", alt: "Copa y trofeos en Gana4", caption: "Copa y trofeos" },
+];
+---
+
+<section class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+  <div class="max-w-2xl">
+    <p class="text-xs font-semibold uppercase tracking-widest text-accent-soft">Capturas</p>
+    <h2 class="mt-3 font-display text-3xl font-bold sm:text-4xl">Así se juega</h2>
+  </div>
+
+  <ul class="mt-10 grid gap-6 sm:grid-cols-3">
+    {
+      shots.map((shot) => (
+        <li class="glass overflow-hidden rounded-3xl">
+          <img
+            src={shot.src}
+            alt={shot.alt}
+            width="1080"
+            height="1920"
+            loading="lazy"
+            class="aspect-[9/16] w-full object-cover object-top"
+          />
+          <p class="px-5 py-4 text-sm text-txt-soft">{shot.caption}</p>
+        </li>
+      ))
+    }
+  </ul>
+</section>

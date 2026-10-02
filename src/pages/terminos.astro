@@ -1,0 +1,254 @@
+---
+import Base from "../layouts/Base.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+const contactEmail = "alexisdeveloper2722@gmail.com";
+const lastUpdated = "2 de octubre de 2026";
+
+const sections = [
+  { id: "aceptacion", label: "1. Aceptación de los términos" },
+  { id: "licencia", label: "2. Licencia de uso" },
+  { id: "conducta", label: "3. Conducta aceptable" },
+  { id: "contenido", label: "4. Contenido y propiedad intelectual" },
+  { id: "servicios", label: "5. Servicios de terceros" },
+  { id: "disponibilidad", label: "6. Disponibilidad y actualizaciones" },
+  { id: "responsabilidad", label: "7. Limitación de responsabilidad" },
+  { id: "menores", label: "8. Menores de edad" },
+  { id: "cambios", label: "9. Cambios y ley aplicable" },
+  { id: "contacto", label: "10. Contacto" },
+];
+---
+
+<Base
+  title="Términos de Uso – Gana4"
+  description="Términos y condiciones de uso de la aplicación Gana4 (com.romel.gana4): licencia de uso, conducta aceptable, propiedad intelectual y limitación de responsabilidad."
+  canonicalPath="/terminos"
+  type="article"
+>
+  <Nav />
+
+  <main class="mx-auto max-w-4xl px-4 pb-8 pt-12 sm:px-6">
+    <p class="text-xs font-semibold uppercase tracking-widest text-accent-soft">Documento legal</p>
+    <h1 class="mt-3 font-display text-4xl font-bold sm:text-5xl">Términos de Uso</h1>
+    <p class="mt-4 max-w-2xl text-txt-soft">
+      Estos términos regulan el uso de la aplicación <strong class="text-txt">Gana4</strong>. Al
+      instalarla o utilizarla, aceptas las condiciones descritas a continuación.
+    </p>
+
+    <div class="glass mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 rounded-2xl px-5 py-4">
+      <div>
+        <p class="text-xs uppercase tracking-widest text-txt-muted">Última actualización</p>
+        <p class="mt-1 text-sm font-medium text-txt">{lastUpdated}</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest text-txt-muted">Aplicación</p>
+        <p class="mt-1 text-sm font-medium text-txt">Gana4 · com.romel.gana4</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest text-txt-muted">Contacto</p>
+        <a
+          href={`mailto:${contactEmail}`}
+          class="mt-1 inline-block break-all text-sm font-medium text-accent-soft hover:text-cyan"
+        >
+          {contactEmail}
+        </a>
+      </div>
+    </div>
+
+    <nav class="glass mt-8 rounded-2xl p-6" aria-label="Índice de contenidos">
+      <p class="font-display text-sm font-semibold uppercase tracking-widest text-txt-muted">
+        Contenido
+      </p>
+      <ol class="mt-4 grid gap-2 sm:grid-cols-2">
+        {
+          sections.map((section) => (
+            <li>
+              <a
+                href={`#${section.id}`}
+                class="block text-sm text-txt-soft transition hover:text-accent-soft"
+              >
+                {section.label}
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </nav>
+
+    <article class="mt-12 space-y-12">
+      <section id="aceptacion">
+        <h2 class="font-display text-2xl font-semibold text-txt">1. Aceptación de los términos</h2>
+        <p class="mt-4 text-txt-soft">
+          Gana4 (en adelante, «la aplicación») es un juego de cuatro en línea distribuido a través de
+          Google Play. El hecho de descargarla, instalarla o utilizarla implica la aceptación plena
+          de estos términos. Si no estás de acuerdo con alguno de ellos, te pedimos que no utilices
+          la aplicación.
+        </p>
+      </section>
+
+      <section id="licencia">
+        <h2 class="font-display text-2xl font-semibold text-txt">2. Licencia de uso</h2>
+        <p class="mt-4 text-txt-soft">
+          Se te concede una licencia <strong class="text-txt">personal, gratuita, limitada,
+          no exclusiva, intransferible y revocable</strong> para usar la aplicación en tus
+          dispositivos, con fines recreativos y privados.
+        </p>
+        <p class="mt-4 text-txt-soft">Queda expresamente prohibido:</p>
+        <ul class="mt-3 list-disc space-y-2 pl-6 text-txt-soft">
+          <li>Revender, alquilar, arrendar o distribuir la aplicación.</li>
+          <li>
+            Realizar ingeniería inversa, descompilar, desensamblar o intentar extraer el código
+            fuente, salvo en la medida en que la normativa aplicable lo permita.
+          </li>
+          <li>Eliminar, alterar u ocultar avisos de autoridad o marcas de la aplicación.</li>
+          <li>Utilizar la aplicación con fines comerciales o publicitarios sin autorización escrita.</li>
+          <li>Emplear robots, scripts u otros medios automatizados para jugar o manipular partidas.</li>
+        </ul>
+      </section>
+
+      <section id="conducta">
+        <h2 class="font-display text-2xl font-semibold text-txt">3. Conducta aceptable</h2>
+        <p class="mt-4 text-txt-soft">
+          El multijugador de Gana4 se limita a tu red WiFi local. Al hospedar o unirte a una partida
+          te comprometes a:
+        </p>
+        <ul class="mt-3 list-disc space-y-2 pl-6 text-txt-soft">
+          <li>Respetar a los demás jugadores y no interferir con sus partidas.</li>
+          <li>No usar la función de red para actividades ilícitas o no autorizadas.</li>
+          <li>
+            No intentar acceder a dispositivos o redes ajenas mediante la aplicación. El juego solo
+            debe usarse en redes a las que tengas acceso legítimo.
+          </li>
+        </ul>
+      </section>
+
+      <section id="contenido">
+        <h2 class="font-display text-2xl font-semibold text-txt">
+          4. Contenido y propiedad intelectual
+        </h2>
+        <p class="mt-4 text-txt-soft">
+          Todo el contenido de la aplicación —código, diseño, gráficos, interfaz, iconos, sonidos,
+          frases del avatar, tipografías y textos— es titularidad de su autor o de sus licenciantes
+          y está protegido por las leyes de propiedad intelectual e industrial.
+        </p>
+        <p class="mt-4 text-txt-soft">
+          Las marcas, nombres comerciales y logotipos de Google, Google Play y AdMob pertenecen a
+          Google LLC y se usan conforme a sus condiciones de servicio. El resto del contenido
+          pertenece a Gana4.
+        </p>
+      </section>
+
+      <section id="servicios">
+        <h2 class="font-display text-2xl font-semibold text-txt">5. Servicios de terceros</h2>
+        <p class="mt-4 text-txt-soft">
+          La aplicación muestra anuncios proporcionados por Google AdMob y depende de Google Play
+          Services para su funcionamiento. El uso de esos servicios se rige por los términos y las
+          políticas de Google. Te recomendamos consultar la
+          <a
+            href="https://policies.google.com/terms"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-accent-soft underline decoration-accent/40 underline-offset-4 hover:text-cyan"
+            >Política de Términos de Servicio de Google</a
+          >.
+        </p>
+        <p class="mt-4 text-txt-soft">
+          Gana4 no tiene control sobre el contenido de los anuncios mostrados ni sobre las
+          interrupciones que puedan producir.
+        </p>
+      </section>
+
+      <section id="disponibilidad">
+        <h2 class="font-display text-2xl font-semibold text-txt">
+          6. Disponibilidad y actualizaciones
+        </h2>
+        <p class="mt-4 text-txt-soft">
+          La aplicación se ofrece «tal cual». Podemos modificarla, actualizarla, suspenderla o
+          retirarla en cualquier momento sin previo aviso. Las actualizaciones pueden cambiar
+          funcionalidades, niveles o el diseño de la interfaz.
+        </p>
+        <p class="mt-4 text-txt-soft">
+          No garantizamos que la aplicación esté libre de errores ni que sea compatible con todos
+          los dispositivos.
+        </p>
+      </section>
+
+      <section id="responsabilidad">
+        <h2 class="font-display text-2xl font-semibold text-txt">
+          7. Limitación de responsabilidad
+        </h2>
+        <p class="mt-4 text-txt-soft">
+          En la máxima medida permitida por la ley aplicable, ni Gana4 ni sus desarrolladores serán
+          responsables de:
+        </p>
+        <ul class="mt-3 list-disc space-y-2 pl-6 text-txt-soft">
+          <li>Daños indirectos, lucro cesante o pérdida de datos derivados del uso de la app.</li>
+          <li>Interrupciones, errores o falta de disponibilidad del servicio.</li>
+          <li>Contenido ofensivo o inapropiado mostrado por terceros, incluidos los anuncios.</li>
+          <li>Problemas de red o seguridad en el multijugador local.</li>
+        </ul>
+        <p class="mt-4 text-txt-soft">
+          Tu único y exclusivo recurso ante cualquier disconformidad con la aplicación es dejar de
+          utilizarla y desinstalarla.
+        </p>
+      </section>
+
+      <section id="menores">
+        <h2 class="font-display text-2xl font-semibold text-txt">8. Menores de edad</h2>
+        <p class="mt-4 text-txt-soft">
+          Si tienes menos de la edad legal de consentimiento en tu país, necesitas la autorización
+          de tu padre, madre o tutor legal para usar la aplicación. Estos términos se aplican
+          igualmente cuando la aplicación es utilizada bajo la supervisión de dicha persona adulta.
+        </p>
+      </section>
+
+      <section id="cambios">
+        <h2 class="font-display text-2xl font-semibold text-txt">
+          9. Cambios y ley aplicable
+        </h2>
+        <p class="mt-4 text-txt-soft">
+          Podemos actualizar estos términos en cualquier momento. La versión vigente estará siempre
+          disponible en esta página, indicando su fecha de actualización. El uso continuado de la
+          aplicación tras la publicación de cambios implica la aceptación de los nuevos términos.
+        </p>
+        <p class="mt-4 text-txt-soft">
+          Estos términos se rigen por la legislación del país en que residas, sin perjuicio de los
+          derechos irrenunciables que la normativa de protección de consumo te reconozca. Cualquier
+          controversia se someterá a los tribunales competentes de dicho lugar.
+        </p>
+        <p class="mt-4 text-txt-soft">
+          <strong class="text-txt">Versión actual:</strong> 1.0 · {lastUpdated}
+        </p>
+      </section>
+
+      <section id="contacto">
+        <h2 class="font-display text-2xl font-semibold text-txt">10. Contacto</h2>
+        <p class="mt-4 text-txt-soft">
+          Si tienes preguntas sobre estos términos, escríbenos:
+        </p>
+        <div class="glass mt-5 rounded-2xl p-6">
+          <p class="text-sm text-txt-soft">Correo electrónico del responsable</p>
+          <a
+            href={`mailto:${contactEmail}`}
+            class="mt-1 block break-all font-display text-lg font-semibold text-accent-soft hover:text-cyan"
+          >
+            {contactEmail}
+          </a>
+          <p class="mt-3 text-sm text-txt-muted">Asunto sugerido: «Términos de Gana4»</p>
+        </div>
+      </section>
+    </article>
+
+    <div class="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8">
+      <a href="/privacidad" class="text-sm text-txt-soft transition hover:text-accent-soft"
+        >← Política de privacidad</a
+      >
+      <a href="/" class="text-sm text-txt-soft transition hover:text-accent-soft"
+        >Volver al inicio →</a
+      >
+    </div>
+  </main>
+
+  <Footer />
+</Base>

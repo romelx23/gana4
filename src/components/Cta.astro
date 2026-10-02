@@ -1,0 +1,42 @@
+---
+const PLAY_URL = "https://play.google.com/store/apps/details?id=com.romel.gana4";
+---
+
+<section class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+  <div
+    class="glass relative overflow-hidden rounded-[2rem] px-6 py-14 text-center sm:px-12"
+  >
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-0 bg-gradient-to-br from-accent/25 via-transparent to-cyan/20"
+    >
+    </div>
+
+    <div class="relative">
+      <h2 class="font-display text-3xl font-bold sm:text-4xl">
+        Descarga <span class="text-gradient">Gana4</span> gratis
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-txt-soft">
+        Cuatro en línea, contra la máquina o con amigos en tu misma red. Sin registro y sin compras
+        dentro de la app.
+      </p>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a
+          href={PLAY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-2xl bg-accent px-7 py-4 font-display font-semibold text-white shadow-lg shadow-accent/30 transition hover:-translate-y-0.5 hover:bg-accent-soft hover:text-ink"
+        >
+          Consíguelo en Google Play
+        </a>
+        <a
+          href="/terminos"
+          class="rounded-2xl border border-white/15 px-7 py-4 font-display font-semibold text-txt-soft transition hover:border-accent/60 hover:text-txt"
+        >
+          Términos de uso
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,63 @@
+---
+const stack = [
+  { name: "Flutter", role: "Interfaz multiplataforma en Dart" },
+  { name: "Provider", role: "Estado del juego y de la economía" },
+  { name: "SharedPreferences", role: "Progreso local, sin base de datos" },
+  { name: "TCP + UDP", role: "Multijugador por WiFi, sin servidor" },
+  { name: "Minimax", role: "IA con poda alfa-beta, 3 niveles" },
+  { name: "AdMob", role: "Anuncios opcionales que finanzan el juego" },
+];
+---
+
+<section id="historia" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+  <div class="max-w-2xl">
+    <p class="text-xs font-semibold uppercase tracking-widest text-accent-soft">La historia detrás</p>
+    <h2 class="mt-3 font-display text-3xl font-bold sm:text-4xl">
+      Empecé por aprender. Terminé <span class="text-gradient">publicando en Play Store</span>.
+    </h2>
+  </div>
+
+  <div class="mt-10 grid items-start gap-8 lg:grid-cols-[1.25fr_.75fr]">
+    <div class="glass rounded-3xl p-8 sm:p-10">
+      <div class="space-y-5 text-txt-soft leading-relaxed">
+        <p>
+          Gana4 nació con un objetivo muy concreto: entender de principio a fin cómo se
+          construye y se publica una aplicación móvil. No quería solo programar; quería ver
+          todo el flujo — del primer widget en Flutter hasta el formulario final en Google
+          Play Console.
+        </p>
+        <p>
+          Y ahí descubrí que publicar una app es, en sí mismo,
+          <strong class="font-semibold text-txt">otro tipo de examen</strong>: políticas de
+          contenido, clasificación por edad, datos de seguridad, pruebas obligatorias y
+          revisiones que rebotan por detalles que no imaginabas. La burocracia de Google fue
+          el maestro más duro del proyecto.
+        </p>
+        <p>
+          El resultado, sin embargo, justificó cada formulario. Hoy Gana4 es un cuatro en
+          línea con una IA que juega en serio, multijugador sin servidores y una copa por
+          disputar. Primero fue el aprendizaje; hoy, la satisfacción de verlo en las pantallas
+          de otros.
+        </p>
+      </div>
+    </div>
+
+    <aside class="glass rounded-3xl border-accent/25 p-8">
+      <h3 class="font-display text-lg font-semibold text-txt">La arquitectura, en corto</h3>
+      <ul class="mt-5 space-y-3">
+        {
+          stack.map((item) => (
+            <li class="rounded-xl bg-white/5 border border-white/10 px-4 py-3">
+              <strong class="block text-sm font-semibold text-txt">{item.name}</strong>
+              <span class="text-xs text-txt-soft">{item.role}</span>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-5 text-xs leading-relaxed text-txt-muted">
+        100 % del juego funciona en tu teléfono. La única red que necesita es la WiFi local
+        para jugar con amigos.
+      </p>
+    </aside>
+  </div>
+</section>
